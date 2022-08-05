@@ -1,0 +1,72 @@
+nav {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 24px;
+	border-bottom: 1px solid lightgray;
+}
+.menu {
+	display: none;
+}
+.nav-logo {
+	width: 30px;
+}
+.navbar-left ul,
+.navbar-right ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	height: 60px;
+}
+.navbar-left {
+	display: flex;
+}
+.navbar-left ul {
+	margin-left: 12px;
+}
+.navbar-left ul li a,
+.navbar-right ul li a {
+	text-decoration: none;
+	color: lightgray;
+	border: 1px solid white;
+	padding: 8px;
+	border-radius: 8px;
+}
+.navbar-left ul li a:hover,
+.navbar-right ul li a:hover {
+	border: 1px solid lightgreen;
+	color: lightgreen;
+}
+.navbar-email {
+	color: lightpink;
+	font-size: 14px;
+	margin-right: 12px;
+}
+
+@media (max-width: 640px) {
+	.menu {
+		display: block;
+	}
+	.navbar-left ul {
+		display: none;
+	}
+	.navbar-email {
+		display: none;
+	}
+}
+
+@keyframes Nav-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .nav-logo {
+    animation: Nav-logo-spin infinite 10s linear;
+  }
+}

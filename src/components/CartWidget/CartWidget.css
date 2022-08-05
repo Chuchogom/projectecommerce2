@@ -1,0 +1,17 @@
+.navbar-shopping-cart {
+	position: relative;
+}
+.navbar-shopping-cart div {
+	width: 16px;
+	height: 16px;
+	background-color: lightgreen;
+	border-radius: 50%;
+	font-size: 14px;
+	font-weight: bold;
+	position: absolute;
+	top: -6px;
+	right: -3px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
