@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Item from '../../components/Item/Item';
 import useGetProducts from '../../hooks/useGetProducts';
+import { getFirestore, doc, getDoc } from 'firebase/firestore'
 import './ItemList.css';
 
 const API = 'https://fakestoreapi.com/products';
 
 const ItemList = () => {
 	const products = useGetProducts(API);
+
+	
 
 	return (
 		<section className="main-container">

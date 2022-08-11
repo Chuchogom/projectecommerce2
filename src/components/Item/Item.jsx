@@ -1,7 +1,8 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import './Item.css';
 import AppContext from '../../context/AppContext';
 import addToCartImage from '../../assets/addToCart.svg';
+import { getFirestore, doc, getDoc } from 'firebase/firestore'
 
 const Item = ({product}) => {
 	const { addToCart } = useContext(AppContext);
@@ -9,6 +10,12 @@ const Item = ({product}) => {
 	const handleClick = item => {
 		addToCart(item);
 	}
+	useEffect( () => {
+		const queryDb = getFirestore();
+		const queryDoc = doc(queryDb, 'products', '9zG4pmDWHDv9sqQk5LGC');
+		getDoc(queryDoc)
+			.then(res => console.log(res))
+	})
 
 	return (
 		<div className="Item">
